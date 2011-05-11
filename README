@@ -1,0 +1,15 @@
+This JQuery sound plugin is based on Thomas Fuchs's article on embedding sounds into a page. If you have not done so please read the article first before using the plugin at http://mir.aculo.us/2011/03/16/how-to-play-a-sound-in-a-web-browser-it-aint-easy/
+
+To use the plugin follow the code template below:
+
+var snd1,snd2,snd3;
+if($.sound.support) {
+  snd1 = $.sound.load('/sounds/snd1');
+  snd2 = $.sound.load('/sounds/snd2');
+  snd3 = $.sound.load('/sounds/snd3');
+}
+
+snd1.play();
+
+Important note: notice the path to the sound file does not contain the file extension. As per Thomas Fuchs' article you should have 3 formats for each sound file: mp3, ogg, m4a. The plugin will load the appropriate format based on the browser's sound support.
+
